@@ -2,7 +2,7 @@ describe('Test Payment Script via Payment Flow', () => {
   const base_url = Cypress.env('kevin_demo_url')
   const psd2_url = "https://psd2.getkevin.eu/login/'"
   const amount_number = 0.01
-  let email = 'stancikasdeividas@gmail.com'
+  const email = 'stancikasdeividas@gmail.com'
   const color_rgb = 'rgb(255, 59, 48)'
 
   console.log(amount_number)
