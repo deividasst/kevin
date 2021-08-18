@@ -1,12 +1,10 @@
 describe('Test Payment Script via Payment Flow', () => {
   const base_url = Cypress.env('kevin_demo_url')
-  const psd2_url = "https://psd2.getkevin.eu/login/'"
+  const donate_url = '/donate/LT'
   const amount_number = 0.01
   const email = 'stancikasdeividas@gmail.com'
   const color_rgb = 'rgb(255, 59, 48)'
 
-  console.log(amount_number)
-  console.log(email)
   it('successfully loads', () => {
     cy.visit(base_url)
   })
@@ -14,7 +12,7 @@ describe('Test Payment Script via Payment Flow', () => {
   it('successfully clicks Payment flow', () => {
     cy.get('.sc-bdnylx').contains('Select payment flow')
     cy.contains('Redirect payment flow').click() 
-    cy.location('pathname').should('eq', '/donate/LT')
+    cy.location('pathname').should('eq', donate_url)
   })
 
   it('successfully fill fields', () => {
