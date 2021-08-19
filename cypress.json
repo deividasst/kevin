@@ -1,5 +1,9 @@
 { 
+  "baseUrl": "https://demo.getkevin.eu/",
   "env": {
-    "kevin_demo_url": "https://demo.getkevin.eu/"
+    "donate_url": "/donate/LT",
+    "amount_default": 0.01,
+    "email": "stancikasdeividas@gmail.com",
+    "rgb": "rgb(255, 59, 48)"
   }
 }

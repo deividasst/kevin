@@ -1,18 +1,17 @@
 describe('Test Payment Script via Payment Flow', () => {
-  const base_url = Cypress.env('kevin_demo_url')
-  const donate_url = '/donate/LT'
-  const amount_number = 0.01
-  const email = 'stancikasdeividas@gmail.com'
-  const color_rgb = 'rgb(255, 59, 48)'
+  const donate_lt_url = Cypress.env('donate_url')
+  const amount_number = Cypress.env('amount_default')
+  const email = Cypress.env('email')
+  const color_rgb = Cypress.env('rgb')
 
   it('successfully loads', () => {
-    cy.visit(base_url)
+    cy.visit('/')
   })
 
   it('successfully clicks Payment flow', () => {
     cy.get('.sc-bdnylx').contains('Select payment flow')
     cy.contains('Redirect payment flow').click() 
-    cy.location('pathname').should('eq', donate_url)
+    cy.location('pathname').should('eq', donate_lt_url)
   })
 
   it('successfully fill fields', () => {
