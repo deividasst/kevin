@@ -1,2 +1,2 @@
 # kevin
-# run command in project folder: npm run cypress:open
+run command in project folder: npm run cypress:open
